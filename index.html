@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+    <title>Eat The Fruits (Pure JS Game)</title>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!-- Start of: Wrapper -->
+      <header>
+        <!-- Start of: Header -->
+        <h1 class="form-heading">Eat The Fruits!</h1>
+      </header> <!-- End of: Wrapper -->
+      <section>
+        <span class="inst-1">Drag the player and drop into the dotted box to select player.</span>
+        <div id="characters">
+          <div class="person" draggable="true" data-character="boy" ondragstart="selectTheCharacter(event);">
+            <img src="images/boy.png" id="boy" height="196" width="148" alt="boy" />
+          </div>
+          <div class="person" draggable="true" data-character="girl" ondragstart="selectTheCharacter(event);">
+            <img src="images/girl.png" id="girl" height="196" width="148" alt="girl" />
+          </div>
+          <div class="drop-div" id="drop-div" ondragover="overTheDroppable(event);" ondragleave="revertBack(event);"
+            ondrop="characterDropped(event);">
+          </div>
+          <div class="player-detail">
+            <span class="inst-1">Enter Your Name</span>
+            <input type="text" name="player_name" id="player_name" />
+            <span class="inst-1">Enter Your Age</span>
+            <input type="text" name="player_age" id="player_age" />
+            <button id="play_game">Start Game</button>
+          </div>
+          <div class="player-info">
+            <span id="p_detail">Welcome!</span>
+            <span>Name:</span>
+            <span id="p_name"></span>
+            <span>Age:</span>
+            <span id="p_age"></span>
+          </div>
+        </div>
+      </section>
+      <section id="content">
+        <!-- Start of: Web ppostal_code content-->
+        <div class="modal">
+          <h1>Game Over</h1>
+          <button>Start Again</button>
+        </div>
+        <canvas id="game_canvas"></canvas>
+      </section> <!-- End of: Web ppostal_code content-->
+      <footer>
+        <!-- Start of: Footer-->
+        copyright <code>&copy;</code> <a href="#">2022 Eat The Fruits (Pure JS Game). All rights reserved.</a>
+      </footer> <!-- End of: Footer-->
+    </div> <!-- End of: Wrapper -->
+    <script src="game.js"></script>
+  </body>
+
+</html>
