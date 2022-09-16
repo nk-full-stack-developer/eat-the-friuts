@@ -1,6 +1,7 @@
 
 // Declare the global variables
 let sounds = ['sound/sound1.ogg', 'sound/sound2.mp3']; // sounds for grabbing fruit
+let effect = document.createElement('audio');
 let players = ['boy', 'girl']; // Player character array
 // Fruit types
 let fruits = ['apple', 'banana', 'cactus', 'lemon', 'orange', 'pear', 'spiky_ball', 'strawberry']
@@ -241,7 +242,6 @@ function characterDropped(e) {
 
 // Generalize function to play any sound from the folder
 function playSound(sound) {
-  let effect = document.createElement('audio');
   effect.src = sound;
   effect.play();
 }
